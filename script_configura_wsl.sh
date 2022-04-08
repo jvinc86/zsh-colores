@@ -96,3 +96,10 @@ EXA_VERSION=$(curl -s "https://api.github.com/repos/ogham/exa/releases/latest" |
 curl -Lo exa.zip "https://github.com/ogham/exa/releases/latest/download/exa-linux-x86_64-v${EXA_VERSION}.zip"
 sudo unzip -q exa.zip bin/exa -d /usr/local
 rm -rf exa.zip
+
+# Configurar alias
+mkdir -p ~/ps/
+cd ~/ps/
+git clone https://github.com/jvinc86/alias-ubuntu.git
+cp ~/.zshrc ~/.zshrc-backup
+source ~/ps/alias-ubuntu/alias.sh
